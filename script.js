@@ -8,7 +8,7 @@ webapp.ready();
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
     webapp.sendData("TestData");
-})
+});
 
 
 
