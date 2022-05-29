@@ -7,7 +7,7 @@ webapp.MainButton.setParams({text: "Отправить", color: "#0fff00", text_
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
     let data = document.getElementById("data").value;
-    webapp.sendData(data.toString());
+    webapp.sendData(data);
 });
 
 
