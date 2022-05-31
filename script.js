@@ -10,10 +10,12 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
     let chb2 = document.getElementById("chb2").value;
     let chb3 = document.getElementById("chb3").value;
     let comment = document.getElementById("data").value;
-    let data = chb1 + "|" + chb2 + "|" + chb3;
+    let data = chb1 + "|" + chb2 + "|" + chb3 + "|";
 
     if (!(comment.trim() === "")) {
-        data += "|" + comment;
+        data += comment;
+    } else {
+        data += " ";
     }
 
     webapp.sendData(data);
