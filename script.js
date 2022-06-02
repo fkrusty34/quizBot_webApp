@@ -12,7 +12,7 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
     let comment = document.getElementById("data").value;
     let data = chb1 + "|" + chb2 + "|" + chb3 + "|";
 
-    if (!(data === "|||")) {
+    if (!(data === "0|0|0|")) {
 
         if (!(comment.trim() === "")) {
             data += comment;
