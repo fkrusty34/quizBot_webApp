@@ -12,17 +12,20 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
     let comment = document.getElementById("data").value;
     let data = chb1 + "|" + chb2 + "|" + chb3 + "|";
 
-    if (!(data === "0|0|0|")) {
-
-        if (!(comment.trim() === "")) {
-            data += comment;
-        } else {
-            data += " ";
+    while (true) {
+        if (data === "0|0|0|") break;
+        if (comment.indexOf("|") > -1) {
+            alert("Комментарий содержит недопустимый символ '|'");
+            break;
         }
 
+        if (comment.trim() !== "")
+            data += comment;
+        else
+            data += " ";
+
         webapp.sendData(data);
+
+        break;
     }
 });
-
-
-
